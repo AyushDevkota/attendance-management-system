@@ -1,0 +1,27 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: hsl(0, 0%, 10%);
+}
+
+.btn {
+	position: absolute;
+	right: 7%;
+	top: 8%;
+	background-color: rgb(72, 78, 82);
+	color: rgb(191, 206, 216);
+}
+
+.btn:hover {
+	background-color: #333;
+	color: white;
+}
+
+@media (max-width: 800px) {
+	.btn {
+		right: auto;
+	}
+}

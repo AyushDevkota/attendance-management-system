@@ -1,0 +1,22 @@
+.info {
+	padding: 1em 3em;
+	border: 1px solid #fff;
+	border-radius: 2em;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	font-size: 20px;
+	letter-spacing: 1px;
+}
+
+.info__btnContainer {
+	display: flex;
+	justify-content: flex-end;
+	gap: 1em;
+}
+
+button:hover {
+	background-color: rgb(38, 38, 44);
+	color: rgb(189, 182, 182);
+	box-shadow: 5px 5px 10px rgb(38, 38, 44);
+}

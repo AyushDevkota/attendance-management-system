@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Login from "./Components/Login";
+import classes from "./App.module.css";
+import Modal from "./Components/Modal";
+import ModalForm from "./Components/ModalForm";
+import Success from "./Components/Success";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [showModal, setShowModal] = useState(false);
+	const [success, setSuccess] = useState(false);
+	const [msg, setMsg] = useState("");
+
+	return (
+		<main className={classes.container}>
+			<button className={classes.btn} onClick={() => setShowModal(true)}>
+				submit attendance
+			</button>
+			{success && <Success msg={msg} />}
+			<Login />
+			{showModal && (
+				<Modal setShowModal={setShowModal}>
+					<ModalForm
+						setShowModal={setShowModal}
+						setSuccess={setSuccess}
+						setMsg={setMsg}
+					/>
+				</Modal>
+			)}
+		</main>
+	);
 }
 
 export default App;
