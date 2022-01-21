@@ -26,6 +26,8 @@ This is an attendance management system where one can check in and check out onc
 - React Icons
 - Redux/React-Redux
 - Redux Toolkit
+- React Router Dom
+- Authenticated Routes
 
 ## Author
 
